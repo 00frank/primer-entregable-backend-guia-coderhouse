@@ -13,7 +13,12 @@ class ProductManager {
     // si esta todo ok, sumar uno al contador de id y agregar el producto a la lista
     ProductManager.id++;
     this.products.push({
-      ...newProduct,
+      title: title,
+      description: description,
+      price: price,
+      thumbnail: thumbnail,
+      code: code,
+      stock: stock,
       id: ProductManager.id
     });
   }
