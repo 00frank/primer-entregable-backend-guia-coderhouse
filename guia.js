@@ -35,3 +35,18 @@ class ProductManager {
     }
   }
 }
+
+// === A partir de aquí, se agregan los tests del ejercicio ===
+const productsManager = new ProductManager();
+// agrego productos a la lista
+productsManager.addProduct("Trousers", "Vans", 4500, "image1", "code123", 5);
+productsManager.addProduct("T-Shirt", "DC", 4500, "image2", "code124", 8);
+productsManager.addProduct("Sneakers", "CoolHass", 4500, "image3", "code125", 10);
+
+// traigo la lista de productos para luego mostrarla en consola
+const productos = productsManager.getProducts();
+console.log("Productos de la lista", productos);
+
+// traigo un producto en especifico por su id
+const remeraDC = productsManager.getProductById();
+console.log("Mostrando producto", remeraDC);
